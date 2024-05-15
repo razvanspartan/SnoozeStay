@@ -1,0 +1,76 @@
+.mainContainer{
+    margin:8px;
+    background-image: url("../../assets/CrashingWaves.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height: 100%;
+    display:flex;
+    z-index: 5;
+    flex-direction: column;
+    position:relative;
+    overflow: hidden;
+
+}
+.layerBlack{
+    width:100vw;
+    height: 100vh;
+    background-color: var(--background);
+    opacity: 0.8;
+    position: absolute;
+    z-index: 0;
+}
+h2{
+    margin: 0;
+    font-weight: 400;
+}
+.text{
+    color: var(--text);
+    position:relative;
+    font-weight: 100;
+}
+.textContainer{
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.textColor{
+        color: var(--secondary);
+        position:relative;
+        display: inline-block;
+        margin-top: 24px;
+}
+.textInline{
+    color: var(--text);
+    position:relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+p{
+    margin-top: 24px;
+    color:var(--text);
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+.signUpButton{
+width:140px;
+height:36px;
+border: 2px var(--primary) solid;
+background-color: transparent;
+border-radius: 6px;
+font-family: 'Lora';
+font-weight: 400;
+font-size: 16px;
+color: var(--text);
+transition: 0.6s background-color;
+}
+
+.signUpButton:Hover{
+    background-color: var(--primary);
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Lora:400|Montserrat:400');
+:root{
+    --text: #ffffff;
+    --background: #121212;
+    --primary: #44568d;
+    --secondary: #baa587;
+    --secondary2: #D9D9D9;
+    --accent: #879CBA;
+    --background2: #1f1f1f;
+
+
+    p {
+        font-family: 'Lora';
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: 'Montserrat';
+    }
+
+    html {font-size: 100%;} /* 16px */
+
+    h1 {font-size: 4.210rem; /* 67.36px */}
+
+    h2 {font-size: 3.158rem; /* 50.56px */}
+
+    h3 {font-size: 2.369rem; letter-spacing: 4px; /* 37.92px */}
+
+    h4 {font-size: 1.777rem; /* 28.48px */}
+
+    h5 {font-size: 1.333rem; /* 21.28px */}
+
+    small {font-size: 0.750rem; /* 12px */}
+}
+.mainLayout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    position: relative;
+}
+body{
+    background-color: var(--background);
+    padding:0;
+    margin:0;
+    position:relative;
+}
+.headerContainer{
+    height: 64px;
+    width:100%;
+    background-color: #1f1f1f ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.iconContainer{
+    margin-left: 8px;
+}
+.iconName{
+    color: var(--text);
+    margin-left: 56px;
+    letter-spacing: 5px;
+}
+
+.HButton{
+    justify-self: flex-end;
+    margin-left: auto;
+    margin-right: 80px;
+    width:140px;
+    height:36px;
+    border: 2px var(--secondary) solid;
+    background-color: transparent;
+    border-radius: 6px;
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+    transition: 0.6s background-color;
+
+}
+.HButton:hover{
+    background-color: var(--secondary);
+}
+.positionRel{
+    position: relative;
+}
+.cover{
+    height:88.5%;
+    width:99%;
+
+}
