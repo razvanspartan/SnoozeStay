@@ -1,0 +1,133 @@
+.text{
+    font-size: 16px;
+    color: var(--secondary2);
+    position: absolute;
+    pointer-events: none;
+    top: 8px;
+    left: 16px;
+}
+.cardContainer{
+    width:65%;
+    height:75%;
+    margin-top: 5.83%;
+    margin-left: 17.97%;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 5px;
+}
+.formContainer{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 30px;
+
+}
+.formHeader{
+    margin-left: 30%;
+    color:var(--text);
+    margin-top: 5%;
+    font-weight: 400;
+}
+.formHeader h2{
+
+}
+.inputContainer{
+    margin-left: 2%;
+    position: relative;
+    height:5.74%;
+    padding:10px;
+}
+.FNLNContainer{
+    margin-top: 8%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.inputContainer input[type="text"]{
+    background-color: var(--background3);
+    border-left: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 14px;
+    padding-bottom: 6px;
+    font-family: Lora;
+    color: var(--text);
+
+}
+.inputContainer2{
+    margin-top: 8%;
+    margin-left: 4%;
+    position: relative;
+    height:5.74%;
+    padding:10px;
+}
+.inputContainer2 input[id="email/pass"]{
+    background-color: var(--background3);
+    border-left: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width:350px;
+    font-size: 14px;
+    font-family: Lora;
+    padding-bottom: 6px;
+    color: var(--text);
+
+}
+.allInputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.hidden{
+    display: none;
+}
+
+
+.submitButton{
+        width:140px;
+        height:36px;
+        border: 2px var(--primary) solid;
+        background-color: transparent;
+        border-radius: 6px;
+        font-family: 'Lora';
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--text);
+        transition: 0.6s background-color;
+        margin-left:35%;
+        margin-top:10%;
+    }
+
+.submitButton:Hover{
+        background-color: var(--primary);
+    }
+
+.imageContainer{
+    background-image:url("../../assets/img.png") ;
+    width:530px;
+    height:467px;
+    margin-left: 0px;
+    background-size:cover;
+    position: absolute;
+    margin-left: 430px;
+    border-radius:5px;
+}
+.blackLayer{
+    background: linear-gradient(to right, var(--background3), rgb(0,0,0,0));
+    width:530px;
+    height:467px;
+    position: absolute;
+
+    z-index: 1;
+}
