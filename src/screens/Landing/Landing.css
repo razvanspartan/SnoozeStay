@@ -44,13 +44,14 @@ h2{
         color: var(--secondary);
         position:relative;
         display: inline-block;
-        margin-top: 24px;
+        margin-top: 80px;
+        left:16px;
 }
 .textInline{
     color: var(--text);
     position:relative;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 p{
     margin-top: 24px;
@@ -58,18 +59,18 @@ p{
     line-height: 40px;
     letter-spacing: 1px;
 }
-.signUpButton{
-width:140px;
-height:36px;
-border: 2px var(--primary) solid;
-background-color: transparent;
-border-radius: 6px;
-font-family: 'Lora';
-font-weight: 400;
-font-size: 16px;
-color: var(--text);
-transition: 0.6s background-color;
-}
+    .signUpButton{
+        width:140px;
+        height:36px;
+        border: 2px var(--primary) solid;
+        background-color: transparent;
+        border-radius: 6px;
+        font-family: 'Lora';
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--text);
+        transition: 0.6s background-color;
+    }
 
 .signUpButton:Hover{
     background-color: var(--primary);

@@ -12,7 +12,7 @@ const Layout=({children}) =>{
                 <Frame1></Frame1>
                 </div>
                 <h4 className={'iconName'}>SnoozeStay.com</h4>
-                <RedirectButton to={"/Login"} className={"HButton"}>Sign in</RedirectButton>
+                <RedirectButton to={"/SignIn"} className={"HButton"}>Sign in</RedirectButton>
 
             </div>
             <main className={'cover'}>{children}</main>

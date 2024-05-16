@@ -1,14 +1,12 @@
 import React, {useState} from "react";
-import './SignUp.css'
+import './SignIn.css'
 import {Link, useNavigate} from 'react-router-dom'
 import {Frame1} from "../../assets/IconSvg";
 import RedirectButton from "../../cards/RedirectButton";
 import InputArea from "../../cards/inputArea";
 
-const SignUp = () =>{
+const SignIn = () =>{
     const [formData, setFormData] = useState({
-        FN: '',
-        LN: '',
         Email:'',
         Password:''
     });
@@ -25,31 +23,9 @@ const SignUp = () =>{
     return(
         <div className={'cardContainer'}>
             <div className={'formContainer'}>
-                <h4 className={'formHeader'}>Sign up</h4>
+                <h4 className={'formHeader'}>Sign in</h4>
                 <div>
                     <form onSubmit={handleSubmit}>
-                        <div className={'FNLNContainer'}>
-                            <div className={'inputContainer'}>
-                                <input
-                                    type="text"
-                                    id="firstName"
-                                    name="FN"
-                                    value={formData.FN}
-                                    onChange={handleChange}
-                                />
-                                <label className={formData.FN ? 'hidden' : 'text'}>First name..</label>
-                            </div>
-                            <div className={'inputContainer'}>
-                                <input
-                                    type="text"
-                                    name="LN"
-                                    id="lastName"
-                                    value={formData.LN}
-                                    onChange={handleChange}
-                                />
-                                <label className={formData.LN ? 'hidden' : 'text'}>Last name..</label>
-                            </div>
-                        </div>
                         <div className={'inputContainer2'}>
                             <input
                                 type="text"
@@ -82,4 +58,4 @@ const SignUp = () =>{
     )
 }
 
-export default SignUp;
+export default SignIn;
