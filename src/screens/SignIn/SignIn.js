@@ -4,6 +4,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import {Frame1} from "../../assets/IconSvg";
 import RedirectButton from "../../cards/RedirectButton";
 import InputArea from "../../cards/inputArea";
+import axios from "axios";
 
 const SignIn = () =>{
     const [formData, setFormData] = useState({
@@ -15,9 +16,12 @@ const SignIn = () =>{
         setFormData({ ...formData, [name]: value });
     };
     const navigate = useNavigate();
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
-        navigate('/Hotels')
+        const response = await axios.post('http://localhost:8080/usersAuth', formData)
+        const userID = await response.data.id;
+        console.log(response.data)
+        navigate("/Hotels", {state: {userID: userID}});
 
     }
     return(

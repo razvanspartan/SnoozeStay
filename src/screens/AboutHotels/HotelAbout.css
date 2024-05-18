@@ -101,3 +101,10 @@
     border-right: none;
     color: var(--text)
 }
+
+.someabout{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}

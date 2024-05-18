@@ -72,7 +72,7 @@ const SignUp = () =>{
                         </div>
                         <div className={'inputContainer2'}>
                             <input
-                                type="text"
+                                type="password"
                                 name="password"
                                 id="email/pass"
                                 value={formData.password}

@@ -1,6 +1,6 @@
-.roomContainer{
-    max-width:440px;
-    min-height:180px;
+.bookContainer{
+    max-width:600px;
+    min-height:150px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -32,19 +32,6 @@
     margin-left: 20%;
 }
 
-.bookButton{
-    width:100px;
-    height:30px;
-    border: 2px var(--secondary) solid;
-    background-color: transparent;
-    border-radius: 6px;
-    font-family: 'Lora';
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--text);
-    transition: 0.6s background-color;
-    margin-top: 25%;
-}
 
 .bookButton:hover{
     background-color: var(--secondary);
@@ -83,4 +70,28 @@
 
 .roomContainer.expanded{
     max-width: 700px;
+}
+
+.cancelButton{
+    width:100px;
+    height:50px;
+    border: 2px var(--secondary) solid;
+    background-color: transparent;
+    border-radius: 6px;
+    font-family: 'Lora';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+    transition: 0.6s background-color;
+    margin-top: 10%
+}
+
+.cancelButton:hover{
+    background-color: #f93d48;
+}
+
+.bookingDetail{
+    color:var(--text);
+    margin-left: 20%;
+    font-size: 14px;
 }
