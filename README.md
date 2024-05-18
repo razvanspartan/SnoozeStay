@@ -2,7 +2,7 @@
 
 ### StaySnooze is a hotel finder and booking platform, developed for the Siemens Java Internship project, featuring a React.js frontend and a Java Spring Boot backend. It allows users to search for hotels within a specified radius, book stays, and rate their experiences.
 
-### WARNING! Due to lack of time to fix these issues for some pages (specifically for the booking and rooms pages) you might need to refresh the page for changes to take effect
+### WARNING! Due to lack of time to fix these issues for some pages (specifically for the booking and rooms pages) you might need to refresh the page for changes to take effect (or rechoose the hotel from the hotelsearch menu, it depends)
 ## Frontend
 
 ![main page](https://imgur.com/llhN41l.png)
