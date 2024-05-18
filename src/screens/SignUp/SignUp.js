@@ -1,25 +1,36 @@
 import React, {useState} from "react";
 import './SignUp.css'
 import {Link, useNavigate} from 'react-router-dom'
+import axios from 'axios';
 import {Frame1} from "../../assets/IconSvg";
 import RedirectButton from "../../cards/RedirectButton";
 import InputArea from "../../cards/inputArea";
 
 const SignUp = () =>{
+    const[error, setError] = useState(0)
     const [formData, setFormData] = useState({
-        FN: '',
-        LN: '',
-        Email:'',
-        Password:''
+        firstName: '',
+        lastName: '',
+        email:'',
+        password:''
     });
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
     const navigate = useNavigate();
-    const handleSubmit = (e) =>{
+    const  handleSubmit = async (e) =>{
         e.preventDefault();
-        navigate('/Hotels')
+        try {
+            const response = await axios.post('http://localhost:8080/usersRegister', formData)
+            const userID = await response.data.id;
+            console.log(response.data)
+            navigate("/Hotels", {state: {userID: userID}});
+        }catch(error){
+            console.error('Error', error)
+            setError(1)
+        }
+
 
     }
     return(
@@ -33,45 +44,45 @@ const SignUp = () =>{
                                 <input
                                     type="text"
                                     id="firstName"
-                                    name="FN"
-                                    value={formData.FN}
+                                    name="firstName"
+                                    value={formData.firstName}
                                     onChange={handleChange}
                                 />
-                                <label className={formData.FN ? 'hidden' : 'text'}>First name..</label>
+                                <label className={formData.firstName ? 'hidden' : 'text'}>First name..</label>
                             </div>
                             <div className={'inputContainer'}>
                                 <input
                                     type="text"
-                                    name="LN"
-                                    id="lastName"
-                                    value={formData.LN}
+                                    name="lastName"
+                                    value={formData.lastName}
                                     onChange={handleChange}
                                 />
-                                <label className={formData.LN ? 'hidden' : 'text'}>Last name..</label>
+                                <label className={formData.lastName ? 'hidden' : 'text'}>Last name..</label>
                             </div>
                         </div>
                         <div className={'inputContainer2'}>
                             <input
                                 type="text"
-                                name="Email"
+                                name="email"
                                 id="email/pass"
-                                value={formData.Email}
+                                value={formData.email}
                                 onChange={handleChange}
                             />
-                            <label className={formData.Email ? 'hidden' : 'text'}>Email..</label>
+                            <label className={formData.email ? 'hidden' : 'text'}>Email..</label>
                         </div>
                         <div className={'inputContainer2'}>
                             <input
                                 type="text"
-                                name="Password"
+                                name="password"
                                 id="email/pass"
-                                value={formData.Password}
+                                value={formData.password}
                                 onChange={handleChange}
                             />
-                            <label className={formData.Password ? 'hidden' : 'text'}>Password..</label>
+                            <label className={formData.password ? 'hidden' : 'text'}>Password..</label>
                         </div>
                         <button className={'submitButton'}>Submit</button>
                     </form>
+                    <p className={error!==1 ? 'hidden' : ''}>Something went wrong</p>
                 </div>
                 <div className={'imageContainer'}>
                     <div className={'blackLayer'}>

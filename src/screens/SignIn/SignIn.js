@@ -7,8 +7,8 @@ import InputArea from "../../cards/inputArea";
 
 const SignIn = () =>{
     const [formData, setFormData] = useState({
-        Email:'',
-        Password:''
+        email:'',
+        password:''
     });
     const handleChange = (e) => {
         const { name, value } = e.target;
